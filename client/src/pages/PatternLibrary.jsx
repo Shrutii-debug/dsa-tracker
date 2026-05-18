@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { problemService } from '../services/problemService'
-import PatternBadge from '../components/PatternBadge'
+import PatternBadge from '../components/Patternbadge'
 import { difficultyClass } from '../utils/parseBreakdown'
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard']

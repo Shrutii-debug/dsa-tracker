@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { reviewService } from '../services/problemService'
-import ReviewCard from '../components/ReviewCard'
+import ReviewCard from '../components/Reviewcard'
 
 const ReviewQueue = () => {
   const [reviews, setReviews] = useState([])

@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { problemService } from '../services/problemService'
-import BreakdownCard from '../components/BreakdownCard'
-import BlindMode from '../components/BlindMode'
-import PatternBadge from '../components/PatternBadge'
+import BreakdownCard from '../components/Breakdowncard'
+import BlindMode from '../components/Blindmode'
+import PatternBadge from '../components/Patternbadge'
 import { difficultyClass } from '../utils/parseBreakdown'
 
 const STATUS_OPTIONS = ['Unsolved', 'Attempted', 'Solved']

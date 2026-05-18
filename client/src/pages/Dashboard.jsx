@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { problemService } from '../services/problemService'
 import ProgressChart from '../components/Progresschart'
-import PatternBadge from '../components/PatternBadge'
+import PatternBadge from '../components/Patternbadge'
 import { difficultyClass } from '../utils/parseBreakdown'
 import { useAuth } from '../context/AuthContext'
 
