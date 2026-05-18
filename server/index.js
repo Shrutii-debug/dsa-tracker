@@ -11,10 +11,15 @@ const app = express()
 connectDB()
 
 // Middleware
+const allowedOrigins = process.env.NODE_ENV === 'production'
+  ? (process.env.CLIENT_URL ? process.env.CLIENT_URL.split(',') : [])
+  : ['http://localhost:5173']
+
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production'
-    ? ['https://your-frontend.vercel.app']
-    : 'http://localhost:5173',
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) return callback(null, true)
+    callback(new Error('Not allowed by CORS'))
+  },
   credentials: true,
 }))
 app.use(express.json({ limit: '10mb' }))
