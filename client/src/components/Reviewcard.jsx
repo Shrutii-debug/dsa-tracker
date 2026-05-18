@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { difficultyClass, formatNextReview } from '../utils/parseBreakdown'
-import PatternBadge from './PatternBadge'
+import PatternBadge from './Patternbadge'
 
 const ReviewCard = ({ review, onSubmit }) => {
   const { problem, nextReviewDate, lastStatus, interval } = review
