@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded-full;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-4;
+  }
+
+  .btn-primary {
+    @apply bg-sky-600 hover:bg-sky-500 text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-200 font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+
+  .btn-danger {
+    @apply bg-red-900 hover:bg-red-800 text-red-200 font-medium px-4 py-2 rounded-lg transition-colors;
+  }
+
+  .input {
+    @apply bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-sky-500 transition-colors w-full;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-easy {
+    @apply badge bg-green-900 text-green-300;
+  }
+
+  .badge-medium {
+    @apply badge bg-yellow-900 text-yellow-300;
+  }
+
+  .badge-hard {
+    @apply badge bg-red-900 text-red-300;
+  }
+
+  .badge-pattern {
+    @apply badge bg-sky-900 text-sky-300;
+  }
+
+  .section-header {
+    @apply flex items-center justify-between w-full p-3 text-left bg-gray-800 hover:bg-gray-750 rounded-lg transition-colors;
+  }
+}
+
+/* Code block styling */
+pre {
+  @apply rounded-lg overflow-x-auto text-sm;
+}
+
+/* Markdown content */
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  @apply font-semibold text-gray-100 mt-4 mb-2;
+}
+
+.markdown-content p {
+  @apply text-gray-300 leading-relaxed mb-3;
+}
+
+.markdown-content ul, .markdown-content ol {
+  @apply text-gray-300 ml-4 mb-3;
+}
+
+.markdown-content li {
+  @apply mb-1;
+}
+
+.markdown-content code {
+  @apply bg-gray-800 text-sky-300 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.markdown-content strong {
+  @apply text-gray-100 font-semibold;
+}
