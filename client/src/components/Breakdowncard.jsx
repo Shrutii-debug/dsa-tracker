@@ -1,4 +1,4 @@
-import SectionCollapse from './SectionCollapse'
+import SectionCollapse from './Sectioncollapse'
 import { SECTION_ORDER } from '../utils/parseBreakdown'
 
 const BreakdownCard = ({ breakdown }) => {
